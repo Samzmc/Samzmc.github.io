@@ -1,4 +1,4 @@
-# Mingchuan (Sam) Zou Personal Website
+# Mingchuan Zou Personal Website
 
 This is a static academic personal homepage intended for GitHub Pages.
 

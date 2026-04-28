@@ -1,12 +1,12 @@
 :root {
-  --bg: #f7f5ef;
+  --bg: #f8fafc;
   --surface: #ffffff;
-  --ink: #20201e;
-  --muted: #66645f;
-  --line: #ddd8cc;
-  --accent: #1f6f78;
-  --accent-dark: #184f56;
-  --soft: #edf5f4;
+  --ink: #111827;
+  --muted: #5b6472;
+  --line: #e2e8f0;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --soft: #eff6ff;
   --max-width: 980px;
 }
 
@@ -43,8 +43,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid rgba(32, 32, 30, 0.08);
-  background: rgba(247, 245, 239, 0.92);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(248, 250, 252, 0.92);
   backdrop-filter: blur(12px);
 }
 
@@ -68,7 +68,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 18px;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 .nav-links a {
@@ -95,7 +95,7 @@ main {
   color: var(--accent-dark);
   font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -107,11 +107,11 @@ p {
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.8rem, 7vw, 5.4rem);
-  line-height: 0.98;
+  font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
@@ -133,7 +133,7 @@ h3 {
 .lead {
   max-width: 790px;
   margin: 26px 0 0;
-  color: #3a3935;
+  color: #334155;
   font-size: clamp(1.08rem, 2vw, 1.28rem);
   line-height: 1.65;
 }
@@ -153,8 +153,8 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 4px 11px;
-  background: rgba(255, 255, 255, 0.55);
-  color: #4f4c46;
+  background: var(--soft);
+  color: #1e3a8a;
   font-size: 0.84rem;
   font-weight: 650;
   white-space: nowrap;
@@ -194,7 +194,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  box-shadow: 0 12px 32px rgba(50, 47, 40, 0.045);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.045);
 }
 
 .interest-grid article {

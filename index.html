@@ -324,14 +324,16 @@
 
           <article class="work-item">
             <div class="work-header">
-              <h3>pico-decoder-tiny and pico-analyze</h3>
+              <h3>Reproducing pico-decoder-tiny</h3>
               <span class="tag">Learning dynamics</span>
             </div>
             <p>
-              Independently reproduced a small decoder-only language model
-              around 11M parameters on a single RTX 5080, then built analysis
-              tooling to study training dynamics through CKA, effective rank,
-              and layer-wise weight norm growth.
+              Reproduced a pico-decoder language model of around 11M
+              parameters on a single RTX 5080 with the Pico framework (Diehl
+              Martinez et al., EMNLP 2025 demos), and studied its training
+              dynamics through CKA, effective rank, and layer-wise weight norm
+              growth. I worked through this before applying to the NLIP group,
+              several of whose members wrote the framework.
             </p>
             <p class="work-note">
               The project is motivated by a simple question: which parts of a

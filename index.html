@@ -292,6 +292,44 @@
         <div class="work-list">
           <article class="work-item">
             <div class="work-header">
+              <h3>Reproducing pico-decoder-tiny</h3>
+              <span class="tag">Learning dynamics</span>
+            </div>
+            <p>
+              Trained an 11M-parameter decoder-only language model (12 layers,
+              grouped-query attention) from scratch for 2,000 steps on a
+              single 16GB RTX 5080, with the Pico framework (Diehl Martinez et
+              al., EMNLP 2025 demo). Training kept overflowing the card until
+              I traced it to a silent Flash Attention fallback - a head
+              dimension of 8, below the 16 the kernel requires - and restored
+              O(n) attention memory with manual grouped-query expansion and a
+              memory-efficient backend, bringing peak usage to about 11GB.
+            </p>
+            <p>
+              Analysing the checkpoints with CKA, Frobenius norm and
+              proportional effective rank showed representations converging
+              bottom-up: layer 0 is already above 0.88 CKA at initialisation,
+              while layer 6 reaches 0.95 only at the end of training. MLP
+              weights grew by up to 27% with their spectral structure
+              unchanged from initialisation.
+            </p>
+            <p class="work-note">
+              The project is motivated by a simple question: which parts of a
+              compact language model change most during training, and how can
+              those changes be measured beyond loss curves? I worked through
+              it before applying to the NLIP group, several of whose members
+              wrote the framework.
+            </p>
+            <a
+              class="project-link"
+              href="https://huggingface.co/SamZou/pico-decoder-tiny/tree/pico-decoder-tiny-full"
+            >
+              Model and checkpoints on Hugging Face
+            </a>
+          </article>
+
+          <article class="work-item">
+            <div class="work-header">
               <h3>Flare DeFi Agent</h3>
               <span class="tag">Agents</span>
             </div>
@@ -319,26 +357,6 @@
               lightweight PyTorch MLP on those features to tell when a model's
               internal state looks deceptive. Built at the CUES, CUABC and AI
               Safety Club hackathon in 2025.
-            </p>
-          </article>
-
-          <article class="work-item">
-            <div class="work-header">
-              <h3>Reproducing pico-decoder-tiny</h3>
-              <span class="tag">Learning dynamics</span>
-            </div>
-            <p>
-              Reproduced a pico-decoder language model of around 11M
-              parameters on a single RTX 5080 with the Pico framework (Diehl
-              Martinez et al., EMNLP 2025 demos), and studied its training
-              dynamics through CKA, effective rank, and layer-wise weight norm
-              growth. I worked through this before applying to the NLIP group,
-              several of whose members wrote the framework.
-            </p>
-            <p class="work-note">
-              The project is motivated by a simple question: which parts of a
-              compact language model change most during training, and how can
-              those changes be measured beyond loss curves?
             </p>
           </article>
 

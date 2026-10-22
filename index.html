@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Academic homepage of Mingchuan Zou, third-year Engineering undergraduate at the University of Cambridge, working on the reliability and evaluation of language models."
+      content="Mingchuan Zou, third-year Engineering undergraduate at the University of Cambridge, working on how reliably language models can be evaluated."
     >
+    <meta name="color-scheme" content="light dark">
     <title>Mingchuan Zou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap"
+    >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -28,389 +35,396 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="intro-heading">
-        <div class="hero-layout">
-          <div class="hero-copy">
-            <p class="eyebrow">University of Cambridge - Engineering</p>
-            <h1 id="intro-heading">Mingchuan Zou</h1>
-            <p class="lead">
-              I am a third-year undergraduate in Engineering at the University
-              of Cambridge, Churchill College, taking mostly information
-              engineering options. Last summer I worked in the NLIP group and
-              the ALTA Institute at the Department of Computer Science and
-              Technology on how reliably language models can be evaluated,
-              running the experiments behind four accepted workshop papers at
-              EMNLP and NeurIPS 2026.
-            </p>
-            <div class="hero-meta" aria-label="Academic profile summary">
-              <span>First author, BlackboxNLP at EMNLP 2026</span>
-              <span>Oral, LIGHT at NeurIPS 2026</span>
-              <span>First Class, Part IA</span>
-              <span>Bill Brown Prize</span>
-            </div>
-            <div class="link-row">
-              <a href="mailto:mz541@cam.ac.uk">mz541@cam.ac.uk</a>
-              <a href="https://github.com/Samzmc">GitHub</a>
-              <a href="https://linkedin.com/in/sam-zou">LinkedIn</a>
-            </div>
+        <div>
+          <h1 id="intro-heading">Mingchuan Zou</h1>
+          <p class="tagline">Engineering undergraduate, University of Cambridge</p>
+          <p class="lead">
+            I am in the third year of the Engineering course at Churchill College,
+            taking mostly information engineering options. Last summer I worked in
+            the NLIP group and the ALTA Institute at the Department of Computer
+            Science and Technology on how reliably language models can be
+            evaluated, running the experiments behind four accepted workshop papers
+            at EMNLP and NeurIPS 2026.
+          </p>
+          <ul class="highlights" aria-label="Highlights">
+            <li>Oral, LIGHT at NeurIPS 2026</li>
+            <li>First author, BlackboxNLP at EMNLP 2026</li>
+            <li>First Class, Part IA</li>
+            <li>Bill Brown Prize</li>
+          </ul>
+          <div class="link-row">
+            <a href="mailto:mz541@cam.ac.uk">mz541@cam.ac.uk</a>
+            <a href="https://github.com/Samzmc">GitHub</a>
+            <a href="https://linkedin.com/in/sam-zou">LinkedIn</a>
           </div>
-          <figure class="headshot-frame">
-            <img
-              class="headshot"
-              src="assets/headshot.jpg"
-              alt="Portrait of Mingchuan Zou"
-              width="640"
-              height="640"
-            >
-          </figure>
         </div>
+        <figure style="margin: 0">
+          <img
+            class="headshot"
+            src="assets/headshot.jpg"
+            alt="Portrait of Mingchuan Zou"
+            width="640"
+            height="640"
+          >
+        </figure>
       </section>
 
       <section id="research" class="section" aria-labelledby="research-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Research Interests</p>
-          <h2 id="research-heading">Problems I want to understand</h2>
-        </div>
-        <div class="interest-grid">
-          <article>
+        <h2 id="research-heading">Research interests</h2>
+        <div class="section-body grid-2">
+          <div>
             <h3>Evaluating language models</h3>
             <p>
               Whether an evaluation result means what it appears to mean:
-              agreement with human judgement, score calibration, and the
-              controls that separate a real signal from what the same
-              measurement would show by chance.
+              agreement with human judgement, score calibration, and the controls
+              that separate a real signal from what the same measurement would
+              show by chance.
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>Interpretability</h3>
             <p>
               Linear probes and truth representations, layer-wise and
               circuit-level analysis, and replication: which published effects
-              survive a controlled design, and which turn out to be artefacts
-              of the setup.
+              survive a controlled design, and which are artefacts of the setup.
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>LLM agents and reasoning</h3>
             <p>
-              Tool use through structured, inspectable interfaces, and how
-              routing and deferral decisions change what an agent system
-              actually gets right.
+              Tool use through structured, inspectable interfaces, and how routing
+              and deferral decisions change what an agent system actually gets
+              right.
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>Models under deployment constraints</h3>
             <p>
               Small and compressed models in real settings: what compression,
-              escalation to a larger model, and a small labelling budget cost
-              in accuracy, and how to measure it honestly.
+              escalation to a larger model and a small labelling budget cost in
+              accuracy, and how to measure it honestly.
             </p>
-          </article>
+          </div>
         </div>
       </section>
 
       <section id="education" class="section" aria-labelledby="education-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Education</p>
-          <h2 id="education-heading">Cambridge Engineering</h2>
-        </div>
-        <div class="education-card">
-          <h3>University of Cambridge</h3>
-          <p>
-            Third-year undergraduate in Engineering on the four-year
-            integrated Master's course (BA 2027, MEng 2028), Churchill College.
-            My Part IIA options are mostly information engineering:
-            information theory and coding, statistical signal processing,
-            inference, signals and systems, and mathematical methods.
-          </p>
-          <p>
-            Part IA: First Class, ranked in the top 10% of the year and first
-            at Churchill College. Bill Brown Prize for Engineering and
-            Churchill College Prize Scholarship (2025).
-          </p>
-          <p>
-            Selected as one of 30 engineers for Bending Spoons' First Commit
-            East Asia 2026, a five-day software engineering challenge at the
-            company's Milan headquarters (November 2026).
-          </p>
+        <h2 id="education-heading">Education</h2>
+        <div class="section-body">
+          <article class="entry">
+            <div class="entry-head">
+              <h3>University of Cambridge</h3>
+              <span class="entry-date">2024 – 2028</span>
+            </div>
+            <p class="entry-sub">BA (2027) and MEng (2028) in Engineering · Churchill College</p>
+            <ul>
+              <li>
+                Part IA: First Class, ranked in the top 10% of the year and first
+                at Churchill College.
+              </li>
+              <li>
+                Bill Brown Prize for Engineering and Churchill College Prize
+                Scholarship (2025).
+              </li>
+              <li>
+                Part IIA options are mostly information engineering: information
+                theory and coding, statistical signal processing, inference,
+                signals and systems, and mathematical methods.
+              </li>
+              <li>
+                Selected as one of 30 engineers for Bending Spoons' First Commit
+                East Asia 2026, a five-day software engineering challenge at the
+                company's Milan headquarters (November 2026).
+              </li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section id="experience" class="section" aria-labelledby="experience-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2 id="experience-heading">Research and applied AI</h2>
-        </div>
-        <div class="work-list">
-          <article class="work-item">
-            <div class="work-header">
-              <h3>
-                University of Cambridge, Department of Computer Science and
-                Technology - Summer 2026
-              </h3>
-              <span class="tag">Research intern (UROP)</span>
+        <h2 id="experience-heading">Experience</h2>
+        <div class="section-body">
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Department of Computer Science and Technology</h3>
+              <span class="entry-date">Jun – Aug 2026</span>
             </div>
+            <p class="entry-sub">
+              University of Cambridge · Research Intern (UROP), NLIP Group and ALTA Institute
+            </p>
             <p>
-              Eight weeks in the Natural Language and Information Processing
-              group and the ALTA Institute, implementing and running the
-              experiments behind two projects on language-model reliability.
+              Eight weeks implementing and running the experiments behind two
+              projects on language-model reliability.
             </p>
             <p>
               <strong>Truth representations.</strong> Reproduced a NeurIPS 2025
-              interpretability result in PyTorch, audited the original pipeline
-              and found eight design and implementation problems, then rebuilt
-              the experiment as a 4,992-prompt controlled design on
-              Llama-3.1-8B and 70B. About 45% of the published effect came from
-              surface confounds. The same ablation reversed the conclusion
-              between a constrained and a fully trainable model, which suggests
-              that high probe accuracy can be an artefact of the architecture
-              rather than evidence of a truth-tracking mechanism.
+              interpretability result in PyTorch, audited the original pipeline and
+              found eight design and implementation problems, then rebuilt the
+              experiment as a 4,992-prompt controlled design on Llama-3.1-8B and
+              70B. About 45% of the published effect came from surface confounds.
+              The same ablation reversed the conclusion between a constrained and a
+              fully trainable model, which suggests that high probe accuracy can be
+              an artefact of the architecture rather than evidence of a
+              truth-tracking mechanism.
             </p>
             <p>
               <strong>Small models as judges.</strong> Led the software,
               validation and analysis for a pipeline that scored 850 essays and
-              3,363 LegalBench items with eight open-weight models from 0.8B to
-              27B parameters, on A100 GPUs and hosted APIs. Aligning scores to
-              60 human labels fixed the score scale but not the ranking;
-              measured against 500 random strategies that deferred exactly as
-              many items, uncertainty-based routing held up in 37 of 40 legal
-              conditions and none of 28 essay ones.
+              3,363 LegalBench items with eight open-weight models from 0.8B to 27B
+              parameters, on A100 GPUs and hosted APIs. Aligning scores to 60 human
+              labels fixed the score scale but not the ranking; measured against
+              500 random strategies that deferred exactly as many items,
+              uncertainty-based routing held up in 37 of 40 legal conditions and
+              none of 28 essay ones.
             </p>
           </article>
 
-          <article class="work-item">
-            <div class="work-header">
-              <h3>Deloitte, Shanghai - Summer 2025</h3>
-              <span class="tag">AI application intern</span>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Deloitte</h3>
+              <span class="entry-date">Jul – Sep 2025</span>
             </div>
-            <p>
-              Worked on three internal AI products. Engineered backend agents
-              for an industry research report platform with LangChain, the
-              OpenAI API and Dify, benchmarked models and designed prompt
-              pipelines that output structured Markdown and JSON for
-              visualisation. Designed and implemented a matching algorithm
-              using semantic similarity and cross-curriculum score conversion,
-              which powers a premium feature in an academic application
-              assistant. Applied vision models and LLMs to equity fund
-              statement parsing and field normalisation, with fallback
-              strategies for stable JSON output.
-            </p>
+            <p class="entry-sub">AI Application Intern · Shanghai</p>
+            <ul>
+              <li>
+                Engineered backend agents for an industry research report platform
+                with LangChain, the OpenAI API and Dify; benchmarked models and
+                designed prompt pipelines that output structured Markdown and JSON
+                for visualisation.
+              </li>
+              <li>
+                Designed and implemented a matching algorithm using semantic
+                similarity and cross-curriculum score conversion, which powers a
+                premium feature in an academic application assistant.
+              </li>
+              <li>
+                Applied vision models and LLMs to equity fund statement parsing and
+                field normalisation, with fallback strategies for stable JSON
+                output.
+              </li>
+            </ul>
           </article>
 
-          <article class="work-item">
-            <div class="work-header">
-              <h3>Cambridge University Robotics Society - 2024 to 2026</h3>
-              <span class="tag">Computer vision</span>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Cambridge University Robotics Society</h3>
+              <span class="entry-date">Oct 2024 – Jun 2026</span>
             </div>
+            <p class="entry-sub">Developer · Wise Angel drone project</p>
             <p>
               Fine-tuned a YOLOv8 model with other society members to improve
-              top-view recognition of objects, obstacles and barriers, then
-              tested it and integrated it into the robot's autonomous
-              navigation for the Wise Angel drone project.
+              top-view recognition of objects, obstacles and barriers, then tested
+              it and integrated it into the robot's autonomous navigation.
             </p>
           </article>
         </div>
       </section>
 
       <section id="publications" class="section" aria-labelledby="publications-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Publications</p>
-          <h2 id="publications-heading">Papers and preprints</h2>
-        </div>
-        <div class="work-list">
-          <div class="publication">
-            <div class="work-header">
-              <h3>
-                Development of Linear Truth Encodings in Language Models: A
-                Replication Study
-              </h3>
-              <span class="tag">First author</span>
-            </div>
-            <p>
-              Mingchuan Zou, Suchir Salhan, Paula Buttery. BlackboxNLP at EMNLP
-              2026, Reproducibility and Reliability in Interpretability
-              Analyses special track. Accepted, poster.
+        <h2 id="publications-heading">Publications</h2>
+        <div class="section-body">
+          <article class="entry">
+            <p class="pub-title">
+              <span class="badge">Oral</span>Towards Trustworthy Compact Judges:
+              What Human Labels Can and Cannot Fix in Compact AI Judges
             </p>
-            <a
-              class="project-link"
-              href="https://github.com/Samzmc/truth-encoding-blackboxnlp26"
-            >
-              View code
-            </a>
-          </div>
+            <p class="pub-authors">Suchir Salhan*, <strong>Mingchuan Zou</strong>*, Paula Buttery</p>
+            <p class="pub-venue">
+              <strong>LIGHT Workshop, NeurIPS 2026</strong> · Accepted, oral
+            </p>
+            <div class="entry-links">
+              <a href="https://neurips.cc/virtual/2026/160516">Paper page</a>
+            </div>
+          </article>
 
-          <div class="publication">
-            <div class="work-header">
-              <h3>Can We Trust Small Language Models as Judges?</h3>
-              <span class="tag">Co-first author - 2 workshops</span>
-            </div>
-            <p>
-              With Suchir Salhan (equal contribution) and Paula Buttery.
-              <strong>Accepted at two separate NeurIPS 2026 workshops</strong>,
-              as a poster at each: <strong>JUDGe</strong> (Can We Trust the
-              Judge? Building Reliable Evaluation for Language Models) and
-              <strong>TAE</strong> (Can We Trust AI Evaluation?).
+          <article class="entry">
+            <p class="pub-title">
+              Development of Linear Truth Encodings in Language Models: A
+              Replication Study
             </p>
-          </div>
+            <p class="pub-authors"><strong>Mingchuan Zou</strong>, Suchir Salhan, Paula Buttery</p>
+            <p class="pub-venue">
+              <strong>BlackboxNLP Workshop, EMNLP 2026</strong> · Reproducibility
+              special track · Accepted, poster
+            </p>
+            <div class="entry-links">
+              <a href="https://github.com/Samzmc/truth-encoding-blackboxnlp26">Code</a>
+            </div>
+          </article>
 
-          <div class="publication">
-            <div class="work-header">
-              <h3>
-                Towards Trustworthy Compact Judges: What Human Labels Can and
-                Cannot Fix in Compact AI Judges
-              </h3>
-              <span class="tag">Co-first author - oral</span>
-            </div>
-            <p>
-              With Suchir Salhan (equal contribution) and Paula Buttery. LIGHT
-              (Deployable Small Foundation Models) at NeurIPS 2026. Accepted,
-              oral.
+          <article class="entry">
+            <p class="pub-title">Can We Trust Small Language Models as Judges?</p>
+            <p class="pub-authors"><strong>Mingchuan Zou</strong>*, Suchir Salhan*, Paula Buttery</p>
+            <p class="pub-venue">
+              <strong>JUDGe Workshop, NeurIPS 2026</strong> · Accepted, poster
             </p>
-            <a class="project-link" href="https://neurips.cc/virtual/2026/160516">
-              Workshop page
-            </a>
-          </div>
+            <div class="entry-links">
+              <a href="https://neurips.cc/virtual/2026/workshop/137574">Workshop page</a>
+            </div>
+          </article>
 
-          <div class="publication">
-            <div class="work-header">
-              <h3>
-                SemanticPrefetcher: Accelerate Data Lake Access with
-                Semantics-Aware File Prefetching
-              </h3>
-              <span class="tag">Co-author</span>
-            </div>
-            <p>
-              IEEE International Conference on Cloud Computing Technology and
-              Science (CloudCom) 2025.
+          <article class="entry">
+            <p class="pub-title">Can We Trust Small Language Models as Judges?</p>
+            <p class="pub-authors">Suchir Salhan*, <strong>Mingchuan Zou</strong>*, Paula Buttery</p>
+            <p class="pub-venue">
+              <strong>TAE Workshop, NeurIPS 2026</strong> · Accepted, poster
             </p>
-          </div>
+            <div class="entry-links">
+              <a href="https://tai-eval.github.io/papers/">Accepted papers</a>
+            </div>
+          </article>
+
+          <article class="entry">
+            <p class="pub-title">
+              SemanticPrefetcher: Accelerate Data Lake Access with Semantics-Aware
+              File Prefetching
+            </p>
+            <p class="pub-authors">Co-author</p>
+            <p class="pub-venue">
+              <strong>IEEE CloudCom 2025</strong> · International Conference on
+              Cloud Computing Technology and Science
+            </p>
+          </article>
+
+          <p class="footnote">
+            * Equal contribution. The JUDGe and TAE entries are the same paper,
+            accepted at both workshops.
+          </p>
         </div>
       </section>
 
       <section id="projects" class="section" aria-labelledby="projects-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Projects</p>
-          <h2 id="projects-heading">Engineering work</h2>
-        </div>
-        <div class="work-list">
-          <article class="work-item">
-            <div class="work-header">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="section-body">
+          <article class="entry">
+            <div class="entry-head">
               <h3>Reproducing pico-decoder-tiny</h3>
-              <span class="tag">Learning dynamics</span>
+              <span class="entry-date">Feb – Mar 2026</span>
             </div>
+            <p class="entry-sub">
+              Independent project · Pico framework (Diehl Martinez et al., EMNLP 2025)
+            </p>
             <p>
               Trained an 11M-parameter decoder-only language model (12 layers,
-              grouped-query attention) from scratch for 2,000 steps on a
-              single 16GB RTX 5080, with the Pico framework (Diehl Martinez et
-              al., EMNLP 2025 demo). Training kept overflowing the card until
-              I traced it to a silent Flash Attention fallback - a head
-              dimension of 8, below the 16 the kernel requires - and restored
-              O(n) attention memory with manual grouped-query expansion and a
-              memory-efficient backend, bringing peak usage to about 11GB.
+              grouped-query attention) from scratch on a single 16 GB RTX 5080
+              laptop GPU; Paloma perplexity fell from 59,435 to 1,315 over 2,000
+              steps.
             </p>
             <p>
-              Analysing the checkpoints with CKA, Frobenius norm and
-              proportional effective rank showed representations converging
-              bottom-up: layer 0 is already above 0.88 CKA at initialisation,
-              while layer 6 reaches 0.95 only at the end of training. MLP
-              weights grew by up to 27% with their spectral structure
+              Peak memory sat at 15.5 GB of the card's 16 GB, and three changes to
+              the attention kernels did not move it. The cause turned out to be
+              two silent fallbacks: with a head dimension of 8, PyTorch skips the
+              Flash and cuDNN kernels, and grouped-query attention then rules out
+              the memory-efficient one too, leaving the O(n²) path. Expanding the
+              K/V heads manually let the efficient kernel run and brought peak use
+              under 11 GB.
+            </p>
+            <p>
+              Analysing the checkpoints with CKA, Frobenius norm and effective rank
+              showed representations converging bottom-up: layer 0 is already at
+              0.88 CKA at initialisation, while layer 6 reaches 0.95 only at step
+              1,500. MLP weights grew by up to 27% with their spectral structure
               unchanged from initialisation.
             </p>
-            <p class="work-note">
-              The project is motivated by a simple question: which parts of a
-              compact language model change most during training, and how can
-              those changes be measured beyond loss curves? I worked through
-              it before applying to the NLIP group, several of whose members
-              wrote the framework.
+            <p class="aside">
+              Which parts of a compact language model change most during training,
+              and how can those changes be measured beyond loss curves? I worked
+              through this before applying to the NLIP group, several of whose
+              members wrote the framework.
             </p>
-            <a
-              class="project-link"
-              href="https://huggingface.co/SamZou/pico-decoder-tiny/tree/pico-decoder-tiny-full"
-            >
-              Model and checkpoints on Hugging Face
-            </a>
+            <div class="entry-links">
+              <a href="https://huggingface.co/SamZou/pico-decoder-tiny/tree/pico-decoder-tiny-full">
+                Model and checkpoints on Hugging Face
+              </a>
+            </div>
           </article>
 
-          <article class="work-item">
-            <div class="work-header">
+          <article class="entry">
+            <div class="entry-head">
               <h3>Flare DeFi Agent</h3>
-              <span class="tag">Agents</span>
+              <span class="entry-date">Feb 2026</span>
             </div>
+            <p class="entry-sub">ETH Oxford 2026 hackathon</p>
             <p>
-              Built a tool-using DeFi agent at ETH Oxford 2026 with Claude and
-              MCP, querying Flare blockchain oracles (FTSO v2 price feeds,
-              secure randomness, Data Connector) in natural language over Web3
-              RPC. The full-stack app around it (Next.js, FastAPI, Web3.py) has
-              an agentic tool-calling loop and an on-chain lottery game driven
-              by the random oracle.
+              Built a tool-using DeFi agent with Claude and MCP that queries Flare
+              blockchain oracles (FTSO v2 price feeds, secure randomness, Data
+              Connector) in natural language over Web3 RPC. The full-stack app
+              around it (Next.js, FastAPI, Web3.py) has an agentic tool-calling loop
+              and an on-chain lottery game driven by the random oracle.
             </p>
-            <a class="project-link" href="https://github.com/Samzmc/Flare-Defi-Agent">
-              View repository
-            </a>
+            <div class="entry-links">
+              <a href="https://github.com/Samzmc/Flare-Defi-Agent">Repository</a>
+            </div>
           </article>
 
-          <article class="work-item">
-            <div class="work-header">
+          <article class="entry">
+            <div class="entry-head">
               <h3>LLM deception detection probe</h3>
-              <span class="tag">Interpretability</span>
+              <span class="entry-date">Nov 2025</span>
             </div>
+            <p class="entry-sub">CUES, CUABC and AI Safety Club hackathon</p>
             <p>
-              Implemented a layer-difference activation method - middle layer
-              minus early layer, taken at the final token - and trained a
-              lightweight PyTorch MLP on those features to tell when a model's
-              internal state looks deceptive. Built at the CUES, CUABC and AI
-              Safety Club hackathon in 2025.
+              Implemented a layer-difference activation method, middle layer minus
+              early layer at the final token, and trained a lightweight PyTorch MLP
+              on those features to tell when a model's internal state looks
+              deceptive.
             </p>
           </article>
 
-          <article class="work-item">
-            <div class="work-header">
-              <h3>Cambridge IDP robotics project, Team 101</h3>
-              <span class="tag">Robotics</span>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Integrated Design Project, Team 101</h3>
+              <span class="entry-date">2026</span>
             </div>
+            <p class="entry-sub">Cambridge Engineering, Part IB</p>
             <p>
-              Built an integrated design project robot using Raspberry Pi Pico
-              and MicroPython, combining embedded control, sensing, and team
-              engineering under real hardware constraints.
+              Built a robot on a Raspberry Pi Pico with MicroPython, combining
+              embedded control, sensing and team engineering under real hardware
+              constraints.
             </p>
-            <a class="project-link" href="https://github.com/Samzmc/IDP-2026-Lent-1-101">
-              View repository
-            </a>
+            <div class="entry-links">
+              <a href="https://github.com/Samzmc/IDP-2026-Lent-1-101">Repository</a>
+            </div>
           </article>
         </div>
       </section>
 
       <section id="interests" class="section" aria-labelledby="interests-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Interests</p>
-          <h2 id="interests-heading">Music and flight simulation</h2>
-        </div>
-        <div class="education-card">
-          <p>
-            I produce electronic music - mostly progressive house, tropical
-            house and EDM - and work in Logic Pro, Ableton Live and FL Studio.
-          </p>
-          <p>
-            I also fly in Microsoft Flight Simulator 2024.
-          </p>
+        <h2 id="interests-heading">Interests</h2>
+        <div class="section-body grid-2">
+          <div>
+            <h3>Electronic music</h3>
+            <p>
+              I produce progressive house, tropical house and EDM, working in Logic
+              Pro, Ableton Live and FL Studio.
+            </p>
+          </div>
+          <div>
+            <h3>Flight simulation</h3>
+            <p>I fly in Microsoft Flight Simulator 2024.</p>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-heading">Get in touch</h2>
-        </div>
-        <p>
-          I am looking for a software engineering internship for summer 2027.
-          For that, research collaborations, or general questions, feel free to
-          reach out.
-        </p>
-        <div class="link-row">
-          <a href="mailto:mz541@cam.ac.uk">mz541@cam.ac.uk</a>
-          <a href="https://github.com/Samzmc">GitHub</a>
-          <a href="https://linkedin.com/in/sam-zou">LinkedIn</a>
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <div class="section-body prose">
+          <p>
+            I am looking for a software engineering internship for summer 2027.
+            For that, research collaborations or general questions, feel free to
+            get in touch.
+          </p>
+          <div class="link-row contact-links">
+            <a href="mailto:mz541@cam.ac.uk">mz541@cam.ac.uk</a>
+            <a href="https://github.com/Samzmc">GitHub</a>
+            <a href="https://linkedin.com/in/sam-zou">LinkedIn</a>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Mingchuan Zou · Updated October 2026</p>
+    </footer>
   </body>
 </html>

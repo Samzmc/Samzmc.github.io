@@ -115,6 +115,11 @@
   function measure() {
     const pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
     const maxY = document.documentElement.scrollHeight - window.innerHeight;
+    // nothing to scroll (page shorter than the window): stay at the threshold
+    if (maxY <= 0) {
+      anchors = [[0, home]];
+      return;
+    }
     const xs = sectionXs();
     let pts = sections.map((s, i) => [s.getBoundingClientRect().top + window.scrollY - pad, xs[i]]);
     // Sections near the bottom can't reach the top of the screen: spread them

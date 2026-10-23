@@ -9,6 +9,21 @@
     >
     <meta name="color-scheme" content="light dark">
     <title>Mingchuan Zou</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://samzmc.github.io/">
+    <meta property="og:title" content="Mingchuan Zou">
+    <meta
+      property="og:description"
+      content="Third-year Engineering undergraduate at the University of Cambridge, working on how reliably language models can be evaluated."
+    >
+    <meta property="og:image" content="https://samzmc.github.io/assets/headshot.jpg">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="640">
+    <meta property="og:image:alt" content="Portrait of Mingchuan Zou">
+    <meta name="twitter:card" content="summary">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -43,7 +58,16 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="intro-heading">
-        <div>
+        <figure class="hero-photo">
+          <img
+            class="headshot"
+            src="assets/headshot.jpg"
+            alt="Portrait of Mingchuan Zou"
+            width="640"
+            height="640"
+          >
+        </figure>
+        <div class="hero-text">
           <h1 id="intro-heading">Mingchuan Zou</h1>
           <p class="tagline">Engineering undergraduate, University of Cambridge</p>
           <p class="lead">
@@ -66,15 +90,6 @@
             <a href="https://linkedin.com/in/sam-zou">LinkedIn</a>
           </div>
         </div>
-        <figure style="margin: 0">
-          <img
-            class="headshot"
-            src="assets/headshot.jpg"
-            alt="Portrait of Mingchuan Zou"
-            width="640"
-            height="640"
-          >
-        </figure>
       </section>
 
       <section id="research" class="section" aria-labelledby="research-heading">
@@ -239,10 +254,8 @@
             <p class="pub-authors">Suchir Salhan*, <strong>Mingchuan Zou</strong>*, Paula Buttery</p>
             <p class="pub-venue">
               <strong>LIGHT Workshop, NeurIPS 2026</strong> · Accepted, oral
+              <span class="pub-link"><span class="sep">· </span><a href="https://neurips.cc/virtual/2026/160516">Paper page</a></span>
             </p>
-            <div class="entry-links">
-              <a href="https://neurips.cc/virtual/2026/160516">Paper page</a>
-            </div>
           </article>
 
           <article class="entry">
@@ -254,10 +267,8 @@
             <p class="pub-venue">
               <strong>BlackboxNLP Workshop, EMNLP 2026</strong> · Reproducibility
               special track · Accepted, poster
+              <span class="pub-link"><span class="sep">· </span><a href="https://github.com/Samzmc/truth-encoding-blackboxnlp26">Code</a></span>
             </p>
-            <div class="entry-links">
-              <a href="https://github.com/Samzmc/truth-encoding-blackboxnlp26">Code</a>
-            </div>
           </article>
 
           <article class="entry">
@@ -265,10 +276,8 @@
             <p class="pub-authors"><strong>Mingchuan Zou</strong>*, Suchir Salhan*, Paula Buttery</p>
             <p class="pub-venue">
               <strong>JUDGe Workshop, NeurIPS 2026</strong> · Accepted, poster
+              <span class="pub-link"><span class="sep">· </span><a href="https://neurips.cc/virtual/2026/workshop/137574">Workshop page</a></span>
             </p>
-            <div class="entry-links">
-              <a href="https://neurips.cc/virtual/2026/workshop/137574">Workshop page</a>
-            </div>
           </article>
 
           <article class="entry">
@@ -276,10 +285,8 @@
             <p class="pub-authors">Suchir Salhan*, <strong>Mingchuan Zou</strong>*, Paula Buttery</p>
             <p class="pub-venue">
               <strong>TAE Workshop, NeurIPS 2026</strong> · Accepted, poster
+              <span class="pub-link"><span class="sep">· </span><a href="https://tai-eval.github.io/papers/">Accepted papers</a></span>
             </p>
-            <div class="entry-links">
-              <a href="https://tai-eval.github.io/papers/">Accepted papers</a>
-            </div>
           </article>
 
           <article class="entry">
@@ -319,13 +326,12 @@
               steps.
             </p>
             <p>
-              Peak memory sat at 15.5 GB of the card's 16 GB, and three changes to
-              the attention kernels did not move it. The cause turned out to be
-              two silent fallbacks: with a head dimension of 8, PyTorch skips the
-              Flash and cuDNN kernels, and grouped-query attention then rules out
-              the memory-efficient one too, leaving the O(n²) path. Expanding the
-              K/V heads manually let the efficient kernel run and brought peak use
-              under 11 GB.
+              Adapted the attention step to fit training on the 16 GB laptop GPU:
+              with a head dimension of 8, PyTorch cannot use its Flash or cuDNN
+              attention kernels, and grouped-query attention rules out the
+              memory-efficient one, so expanding the K/V heads before the
+              attention call let that kernel run and brought peak memory from
+              15.5 GB to under 11 GB.
             </p>
             <p>
               Analysing the checkpoints with CKA, Frobenius norm and effective rank

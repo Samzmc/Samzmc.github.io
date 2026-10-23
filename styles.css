@@ -129,6 +129,187 @@ li {
   color: var(--ink);
 }
 
+.nav-links a.is-current {
+  color: var(--accent);
+}
+
+.nav-current {
+  display: none;
+}
+
+/* Runway progress bar (drawn by runway.js; hidden without JavaScript) */
+
+.runway {
+  display: none;
+}
+
+html.js {
+  scroll-padding-top: 96px;
+}
+
+.js .site-header {
+  border-bottom: 0;
+}
+
+.js .nav {
+  min-height: 52px;
+}
+
+.js .section > h2 {
+  top: 102px;
+}
+
+.js .runway {
+  position: relative;
+  display: block;
+  width: min(100% - 40px, var(--max-width));
+  margin: 0 auto;
+  padding-bottom: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.runway-art {
+  display: block;
+  width: 100%;
+  height: 16px;
+  overflow: visible;
+}
+
+.runway .edge {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  opacity: 0.55;
+}
+
+.runway .marks {
+  fill: currentColor;
+  opacity: 0.55;
+}
+
+.runway .marks.lit {
+  fill: var(--accent);
+  opacity: 1;
+}
+
+.runway .centre {
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-dasharray: 7 5;
+  opacity: 0.45;
+}
+
+.runway .centre.lit {
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-dasharray: none;
+  opacity: 1;
+}
+
+.runway .tick {
+  stroke: currentColor;
+  opacity: 0.55;
+}
+
+.runway-plane {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 52px;
+  margin-left: -26px;
+  color: var(--ink);
+  pointer-events: none;
+  visibility: hidden;
+  will-change: transform;
+}
+
+.runway.is-ready .runway-plane {
+  visibility: visible;
+}
+
+.runway-plane svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.35s ease;
+}
+
+.runway-plane.is-back svg {
+  transform: scaleX(-1);
+}
+
+.runway-plane .pl-p {
+  fill: var(--bg);
+  stroke: currentColor;
+  stroke-width: 1.2px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.runway-plane .pl-k {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0.7px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .runway-plane svg {
+    transition: none;
+  }
+}
+
+/* Phones: the runway replaces the row of links (kept for screen readers);
+   tapping the runway jumps to a section */
+@media (max-width: 680px) {
+  html.js {
+    scroll-padding-top: 88px;
+  }
+
+  .js .nav {
+    min-height: 48px;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .js .nav-links {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .js .nav-current {
+    display: block;
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+
+  .js .runway {
+    padding-bottom: 12px;
+  }
+
+  .runway-art {
+    height: 14px;
+  }
+
+  .runway-plane {
+    top: 7px;
+    width: 42px;
+    margin-left: -21px;
+  }
+}
+
 main {
   width: min(100% - 40px, var(--max-width));
   margin: 0 auto;
